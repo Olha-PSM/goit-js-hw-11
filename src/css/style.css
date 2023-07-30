@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.search-form__input {
+  padding: 15px;
+
+  font-size: 20px;
+  margin-right: 20px;
+  width: 300px;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 2px 1px 2px rgb(71, 140, 157);
+}
+
+.search-form__button {
+  display: inline-flex;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(0, 118, 63);
+  box-shadow: 2px 1px 2px rgb(2, 28, 2);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.load-more {
+  font-size: 20px;
+  padding: 20px;
+  color: black;
+  background-clip: padding-box;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: block;
+  background-color: rgb(109, 202, 173);
+  border: none;
+  border-radius: 6px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.photo-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.photo-img {
+  display: block;
+  flex-grow: 1;
+  object-fit: cover;
+  width: 320px;
+  height: 213px;
+}
+.photo-img :hover {
+  cursor: zoom-in;
+}
+.photo-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
