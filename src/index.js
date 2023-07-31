@@ -44,15 +44,6 @@ async function onSubmit(e) {
 function fetchGallery() {
   loadMoreBtn.style.display = 'block';
   newsApiService.fetchArticls().then(showImages);
-  if (data.hits.length === 0) {
-    Notiflix.Notify.failure(
-      'Sorry, there are no images matching your search query. Please try again.'
-    );
-  } else {
-    showImages(data.hits);
-    Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
-    loadMoreBtn.style.display = 'block';
-  }
 }
 
 function onLoadMore() {
